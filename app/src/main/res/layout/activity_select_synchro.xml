@@ -1,26 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context="com.example.kohki.withmanager.SelectSynchro">
+    tools:context="com.example.kohki.withmanager.SelectSynchro"
+    android:orientation="vertical">
 
-    <Button
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_weight="0.3"/>
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/btn_start"
+            android:text="開始"
+            android:layout_weight="0.005"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:gravity="center|top"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="一台で試合を記録します"
+            android:id="@+id/textView10" />
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/synchro"
+            android:layout_gravity="center"
+            android:layout_weight="0.005"
+            android:text="同期画面"
+            android:layout_below="@+id/btn_start"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:layout_weight="0.1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="二台で試合を記録します"
+            android:id="@+id/textView11" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:src="@drawable/manager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/synchro"
-        android:text="同期画面"
-        android:layout_below="@+id/btn_start"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:id="@+id/background"
+        android:layout_weight="2" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_start"
-        android:text="開始"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-</RelativeLayout>
+</LinearLayout>
